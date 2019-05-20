@@ -1,0 +1,46 @@
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical">
+
+        <EditText android:hint="Ra"
+            android:id="@+id/formulario_ra"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <EditText android:hint="Nome"
+            android:id="@+id/formulario_nome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <EditText android:hint="Curso"
+            android:id="@+id/formulario_curso"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <EditText android:hint="Nota 1"
+            android:id="@+id/formulario_nota1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <EditText android:hint="Nota 2"
+            android:id="@+id/formulario_nota2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <EditText android:hint="Nota 3"
+            android:id="@+id/formulario_nota3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <EditText android:hint="Nota 4"
+            android:id="@+id/formulario_nota4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</ScrollView>
