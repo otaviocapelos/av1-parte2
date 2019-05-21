@@ -7,7 +7,7 @@ import com.example.av1_parte2.R;
 import com.example.av1_parte2.model.Aluno;
 
 public class FormularioHelper {
-    private final int id = 0;
+    private int id = 0;
     private final EditText campoRa;
     private final EditText campoNome;
     private final EditText campoCurso;
@@ -17,7 +17,7 @@ public class FormularioHelper {
     private final EditText campoNota_4;
     private Aluno aluno;
 
-    public FormularioHelper(EditText campoRa, FormularioActivity activity, EditText campoCurso, EditText campoNota_1, EditText campoNota_2, EditText campoNota_3, EditText campoNota_4) {
+    public FormularioHelper(FormularioActivity activity) {
         this.campoRa = activity.findViewById(R.id.formulario_ra);
         this.campoNome = activity.findViewById(R.id.formulario_nome);
         this.campoCurso = activity.findViewById(R.id.formulario_curso);;
@@ -30,7 +30,7 @@ public class FormularioHelper {
 
     public Aluno getAluno() {
         aluno.setId(id);
-        aluno.setNome(campoRa.getText().toString());
+        aluno.setRa(campoRa.getText().toString());
         aluno.setNome(campoNome.getText().toString());
         aluno.setCurso(campoCurso.getText().toString());
         aluno.setNota_1((Double.valueOf(campoNota_1.getText().toString())));
@@ -41,8 +41,11 @@ public class FormularioHelper {
     }
 
     public void preencheFormulario(Aluno aluno) {
+        id = aluno.getId();
         campoRa.setText(aluno.getRa());
         campoNome.setText(aluno.getNome());
+        campoRa.setEnabled(false);
+        campoNome.setEnabled(false);
         campoCurso.setText(aluno.getCurso());
         campoNota_1.setText(aluno.getNota_1().toString());
         campoNota_2.setText(aluno.getNota_2().toString());

@@ -50,6 +50,9 @@ public class AlunoAdapter extends BaseAdapter {
         TextView campoNome = (TextView) view.findViewById(R.id.item_nome);
         campoNome.setText(aluno.getNome());
 
+        TextView campoMedia = (TextView) view.findViewById(R.id.item_media);
+        campoMedia.setText(new Double(aluno.getMedia()).toString());
+
         return view;
     }
 }

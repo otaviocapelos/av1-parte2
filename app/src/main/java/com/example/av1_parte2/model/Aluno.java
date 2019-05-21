@@ -68,6 +68,10 @@ public class Aluno implements Serializable {
         this.nota_4 = nota_4;
     }
 
+    public double getMedia() {
+        return (this.nota_1 + this.nota_2 + this.nota_3 + this.nota_4) / 4;
+    }
+
     @Override
     public String toString() {
         return getRa() + "-" + getNome();
